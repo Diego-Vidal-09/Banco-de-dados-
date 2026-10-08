@@ -1,0 +1,155 @@
+### - Teste da Rota Raiz
+
+GET http://localhost:3000/
+Content-Type: application/json
+
+### - Teste do cadastro do usuário 1
+POST http://localhost:3000/usuario
+Content-Type: application/json
+
+{
+    "nome": "Moisés",
+    "email": "Moisés@gmail.com",
+    "senha": "abc123"
+}
+
+### - Teste do cadastro do usuário 2
+POST http://localhost:3000/usuario
+Content-Type: application/json
+
+{
+    "nome": "Ana",
+    "email": "ana@gmail.com",
+    "senha": "123"
+}
+
+### - Teste do cadastro do usuário 3
+POST http://localhost:3000/usuario
+Content-Type: application/json
+
+{
+    "nome": "Bruno",
+    "email": "bruno@gmail.com",
+    "senha": "456"
+}
+
+### - Teste do cadastro do usuário 4
+POST http://localhost:3000/usuario
+Content-Type: application/json
+
+{
+    "nome": "Diego",
+    "email": "diego@gmail.com",
+    "senha": "789"
+}
+
+### - Teste do consultar Usuário 3
+GET http://localhost:3000/usuario/3
+Content-Type: application/json
+
+### - Teste do consultar Usuário 2
+GET http://localhost:3000/usuario/2
+Content-Type: application/json
+
+### - Teste do listar Usuários
+GET http://localhost:3000/usuarios
+Content-Type: application/json
+
+### - Teste de atualizar Usuario 2
+PUT http://localhost:3000/usuario/2
+Content-Type: application/json
+
+{
+    "nome": "Luiza entrosa",
+    "email": "entrosadora@gmail.com",
+    "senha": "123abc"
+}
+
+### - Teste do apagar Usuário 4
+DELETE  http://localhost:3000/usuario/4
+Content-Type: application/json
+
+
+#########################################
+
+
+### - Teste do cadastro do produto 1
+POST http://localhost:3000/produto
+Content-Type: application/json
+
+{
+    "idUsuario": 1,
+    "nomeProduto": "Sapato Social Couro Oxford",
+    "categoria": "SOCIAL",
+    "precoUnitario": 150.00,
+    "qtdeEstoque": 25,
+    "data": "2026-10-08"
+}
+
+### - Teste do cadastro do produto 2
+POST http://localhost:3000/produto
+Content-Type: application/json
+
+{
+    "idUsuario": 2,
+    "nomeProduto": "Mocassim Couro Legítimo",
+    "categoria": "CASUAL",
+    "precoUnitario": 650.00,
+    "qtdeEstoque": 30,
+    "data": "2026-10-08"
+}
+
+### - Teste do cadastro do produto 3
+POST http://localhost:3000/produto
+Content-Type: application/json
+
+{
+    "idUsuario": 3,
+     "nomeProduto": "Bota Couro Legítimo",
+    "categoria": "CASUAL",
+    "precoUnitario": 850.00,
+    "qtdeEstoque": 15,
+    "data": "2026-10-08"
+}
+
+### - Teste do cadastro do produto 4
+POST http://localhost:3000/produto
+Content-Type: application/json
+
+{
+    "idUsuario": 4,
+     "nomeProduto": "Bota Couro Legítimo",
+    "categoria": "CASUAL",
+    "precoUnitario": 850.00,
+    "qtdeEstoque": 15,
+    "data": "2026-10-08"
+}
+
+### - Teste do consultar produto 3
+GET http://localhost:3000/produto/3
+Content-Type: application/json
+
+### - Teste do consultar produto 2
+GET http://localhost:3000/produto/2
+Content-Type: application/json
+
+### - Teste do listar produtos
+GET http://localhost:3000/produtos
+Content-Type: application/json
+
+### - Teste de atualizar produto 2
+PUT http://localhost:3000/produto/2
+Content-Type: application/json
+
+{
+    "idUsuario": 2,
+    "nomeProduto": "Mocassim Couro Legítimo Pro Max 2.0",
+    "categoria": "CASUAL",
+    "precoUnitario": 650.00,
+    "qtdeEstoque": 30,
+    "data": "2026-10-08"
+}
+
+### - Teste do apagar produto 4
+DELETE  http://localhost:3000/produto/4
+Content-Type: application/json
