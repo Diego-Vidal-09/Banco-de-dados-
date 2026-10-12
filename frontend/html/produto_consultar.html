@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_cad.css">
+    <script src="../js/produto_consultar.js" defer></script>
+    <title>Consultar Produto</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>&emsp;&emsp;
+            <span class="titulo_menu">Produtos</span>&emsp;
+            <a href="./produto_cadastrar.html">Cadastrar</a>&emsp;
+            <a href="./produto_listar.html">Listar</a>&emsp;
+            <a href="./produto_consultar.html">Consultar</a>&emsp;
+            <a href="./produto_atualizar.html">Atualizar</a>&emsp;
+            <a href="./produto_apagar.html">Apagar</a>
+            <br><br><hr><br>
+        </nav>
+    </header>
+    <main>
+        <h2>Consultar Produto por Código</h2>
+        <br>
+        <form>
+            <label for="codProduto">Código do Produto (ID)</label><br>
+            <input type="number" id="codProduto" required><br><br>
+            <button id="btn_consultar">Buscar por ID</button>
+        </form>
+        <br>
+        <div id="resposta" class="resposta"></div>
+
+        <br><br><hr><br>
+
+        <h2>Consultar Produto por Nome</h2>
+        <br>
+        <form>
+            <label for="nomeProduto">Nome do Produto</label><br>
+            <input type="text" id="nomeProduto" required><br><br>
+            <button id="btn_consultar_nome">Buscar por Nome</button>
+        </form>
+        <br>
+        <div id="resposta_nome" class="resposta_nome"></div>
+    </main>
+</body>
+</html>

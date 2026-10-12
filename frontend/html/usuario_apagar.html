@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_cad.css">
+    <script src="../js/usuario_apagar.js" defer></script>
+    <title>Excluir Usuário</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>&emsp;&emsp;
+            <span class="titulo_menu">Usuários</span>&emsp;
+            <a href="./usuario_cadastrar.html">Cadastrar</a>&emsp;
+            <a href="./usuario_listar.html">Listar</a>&emsp;
+            <a href="./usuario_consultar.html">Consultar</a>&emsp;
+            <a href="./usuario_atualizar.html">Atualizar</a>&emsp;
+            <a href="./usuario_apagar.html">Apagar</a>
+            <br><br><hr><br>
+        </nav>
+    </header>
+    <main>
+        <h2>Excluir Usuário por Código</h2>
+        <br><br>
+        <form>
+            <label for="codUsuario">Código do Usuário (ID)</label><br>
+            <input type="number" id="codUsuario" required><br><br>
+
+            <button id="btn_apagar">Excluir Usuário</button><br><br><br>
+        </form>        
+        <br><br>
+        <div id="resposta" class="resposta"></div>
+    </main>
+</body>
+</html>

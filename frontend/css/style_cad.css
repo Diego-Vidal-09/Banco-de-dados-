@@ -1,0 +1,48 @@
+input, button, select{
+    background-color: black;
+    border-radius: 16px;
+    text-align: center;
+    padding: 8px 4px;
+    color: white;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    width: 300px;
+    font-size: 1.20rem;
+}
+
+label{
+    font-size: 1.20rem;
+    font-weight: bold;
+}
+
+button{
+    cursor: pointer;
+    background-color: black;
+    color: #12B844;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+
+.resposta, .resposta_nome{
+    font-size: 1.20rem;
+    color: white;
+    font-weight: bold;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: 'Segoe UI';
+}
+
+th{
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+th, td {
+    border: 2px solid white;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}

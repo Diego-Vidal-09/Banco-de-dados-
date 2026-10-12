@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #1994dc;
+}
+
+nav{
+    padding: 16px 8px;
+    text-align: center;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    padding: 8px 16px;
+}
+
+a:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    transition: ease 0.7s;
+}
+
+main, footer{
+    text-align: center;
+    color: white;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+.titulo_menu{
+    color: rgb(0, 50, 100); 
+    font-family: 'Segoe UI';
+    font-size: 1.4rem; 
+    font-weight: bold;
+}
