@@ -1,48 +1,113 @@
-input, button, select{
-    background-color: black;
-    border-radius: 16px;
-    text-align: center;
-    padding: 8px 4px;
-    color: white;
-    font-family: 'Segoe UI';
-    font-weight: bold;
-    width: 300px;
-    font-size: 1.20rem;
+/* Formulários, botões e listagens — complementa style.css */
+form {
+  width: min(100%, 490px);
+  margin: 10px auto 24px;
+  padding: 36px clamp(20px, 5vw, 42px) 28px;
+  background: var(--surface, #fff);
+  border: 1px solid var(--stroke, #e9e9f1);
+  border-radius: 22px;
+  box-shadow: var(--shadow, 0 16px 48px rgba(30,25,66,.055));
+  text-align: left;
 }
 
-label{
-    font-size: 1.20rem;
-    font-weight: bold;
+label {
+  display: inline-block;
+  margin: 0 0 7px;
+  color: var(--text, #202235);
+  font-size: .88rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
 }
 
-button{
-    cursor: pointer;
-    background-color: black;
-    color: #12B844;
-    border: 2px solid white;
-    transition: 0.3s;
+input, select, textarea {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 46px;
+  margin: 0;
+  padding: 11px 14px;
+  border: 1px solid #e4e5ed;
+  border-radius: 11px;
+  background: #fcfcfe;
+  color: #222337;
+  font: 500 .95rem/1.4 'DM Sans', 'Segoe UI', sans-serif;
+  text-align: left;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s, background .2s;
 }
-
-.resposta, .resposta_nome{
-    font-size: 1.20rem;
-    color: white;
-    font-weight: bold;
+input::placeholder, textarea::placeholder { color: #a2a4b3; }
+input:focus, select:focus, textarea:focus {
+  border-color: #9c87ec;
+  box-shadow: 0 0 0 4px #f0ebff;
+  background: #fff;
 }
+select { cursor: pointer; }
+input[type='date'] { color-scheme: light; }
 
+button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 45px;
+  padding: 11px 23px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  background: var(--accent, #6e56cf);
+  color: #fff;
+  font: 700 .93rem/1.4 'DM Sans', 'Segoe UI', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(110,86,207,.16);
+  transition: background .2s, transform .2s, box-shadow .2s;
+}
+button:hover { background: #5942b6; transform: translateY(-2px); box-shadow: 0 12px 22px rgba(110,86,207,.2); }
+button:active { transform: translateY(0); }
+button:focus-visible { outline: 3px solid #c6b7ff; outline-offset: 3px; }
+form button { width: 100%; margin-top: 6px; }
+
+.resposta, .resposta_nome, #resposta, #resposta_nome {
+  max-width: 980px;
+  margin: 16px auto;
+  color: #51459d;
+  font-size: .96rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.resposta:empty, .resposta_nome:empty, #resposta:empty, #resposta_nome:empty { display: none; }
+
+/* Listas montadas pelo JavaScript */
 table {
-    margin: 20px auto;
-    border-collapse: collapse;
-    font-family: 'Segoe UI';
+  width: 100%;
+  max-width: 1050px;
+  margin: 24px auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e8e8f0;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(28,26,53,.04);
+  color: var(--text, #202235);
+  font: 500 .9rem/1.5 'DM Sans', 'Segoe UI', sans-serif;
 }
-
-th{
-    font-weight: bold;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
 th, td {
-    border: 2px solid white;
-    padding: 10px;
-    text-align: center;
-    color: white;
+  padding: 15px 16px;
+  border: none;
+  border-bottom: 1px solid #f0eff5;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+th { background: #f6f4ff; color: #4f438a; font-weight: 800; }
+tr:last-child td { border-bottom: none; }
+tbody tr:hover td { background: #fbfaff; }
+
+/* Evita tabela estourando a tela em celulares */
+.resposta, .resposta_nome, #resposta, #resposta_nome { overflow-x: auto; }
+main > hr { max-width: 560px; border: 0; border-top: 1px solid var(--stroke, #e9e9f1); }
+@media (max-width: 600px) {
+  form { border-radius: 17px; padding: 24px 19px 20px; }
+  table { font-size: .82rem; }
+  th, td { padding: 11px 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }

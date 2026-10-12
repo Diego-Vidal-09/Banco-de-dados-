@@ -1,47 +1,125 @@
-*{
-    margin: 0;
-    padding: 0;
+/* Sistema Web — identidade visual minimalista */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+  color-scheme: light;
+  --background: #f7f7fa;
+  --surface: #ffffff;
+  --text: #202235;
+  --muted: #777b8d;
+  --stroke: #e9e9f1;
+  --accent: #6e56cf;
+  --accent-soft: #f0ecff;
+  --shadow: 0 16px 48px rgba(30, 25, 66, .055);
 }
 
-body{
-    background-color: #1994dc;
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(ellipse 65% 45% at 100% 0%, #ede7ff 0, transparent 65%), var(--background);
+  color: var(--text);
+  font: 400 16px/1.65 'DM Sans', 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-nav{
-    padding: 16px 8px;
-    text-align: center;
+header {
+  background: rgba(255,255,255,.88);
+  border-bottom: 1px solid var(--stroke);
+  backdrop-filter: blur(16px);
 }
 
-nav a{
-    text-decoration: none;
-    font-size: 1.4rem;
-    font-family: 'Segoe UI', sans-serif;
-    color: white;
-    padding: 8px 16px;
+nav {
+  width: min(1180px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: 16px 0 7px;
+  text-align: center;
+  line-height: 3.15;
+  font-size: 0; /* neutraliza espaços grandes do HTML sem alterar o markup */
 }
 
-a:hover{
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 16px;
-    transition: ease 0.7s;
+nav a, nav .titulo_menu {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 3px 3px;
+  padding: 3px 13px;
+  border-radius: 10px;
+  line-height: 2;
+  font-size: 13px;
+  letter-spacing: .01em;
+  white-space: nowrap;
 }
 
-main, footer{
-    text-align: center;
-    color: white;
+nav a {
+  text-decoration: none;
+  color: #666a7d;
+  font-weight: 600;
+  transition: background .2s, color .2s, transform .2s;
+}
+nav a:hover, nav a:focus-visible {
+  background: var(--accent-soft);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+nav a[href$='index.html'] {
+  color: var(--text);
+  background: #f1f1f6;
+  font-weight: 800;
+}
+nav .titulo_menu {
+  color: var(--accent);
+  background: var(--accent-soft);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: .12em;
+}
+nav hr {
+  width: 100%;
+  height: 1px;
+  border: none;
+  background: var(--stroke);
+  margin: 3px auto 6px;
 }
 
-h1{
-    font-size: 3rem;
+main {
+  max-width: 1120px;
+  padding: 72px 24px 100px;
+  margin: 0 auto;
+  text-align: center;
 }
-
-h2{
-    font-size: 2.5rem;
+main::before {
+  content: 'SISTEMA DE GESTÃO';
+  display: inline-block;
+  padding: 7px 13px;
+  margin-bottom: 22px;
+  border: 1px solid #ded5ff;
+  border-radius: 999px;
+  background: #f3efff;
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .2em;
 }
+h1, h2 {
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  line-height: 1.22;
+  letter-spacing: -.055em;
+  margin: 0 auto;
+}
+h1 { font-size: clamp(2.2rem, 4vw, 3.65rem); font-weight: 800; max-width: 900px; }
+h2 { font-size: clamp(1.5rem, 2.9vw, 2.2rem); font-weight: 700; max-width: 840px; }
+main > h1 + br + br + h2,
+main > h2 { color: var(--text); }
+main > h1 ~ h2 { color: var(--muted); font-weight: 500; line-height: 1.4; letter-spacing: -.035em; }
+footer { text-align: center; padding: 28px 20px; color: var(--muted); }
+::selection { background: #e1d7ff; color: #2e2356; }
+:focus-visible { outline: 3px solid #a991ff; outline-offset: 3px; }
 
-.titulo_menu{
-    color: rgb(0, 50, 100); 
-    font-family: 'Segoe UI';
-    font-size: 1.4rem; 
-    font-weight: bold;
+@media (max-width: 680px) {
+  nav { width: calc(100% - 20px); padding: 12px 0; line-height: 2.7; }
+  nav a, nav .titulo_menu { margin: 2px 1px; padding: 3px 9px; font-size: 12px; }
+  nav .titulo_menu { font-size: 10px; }
+  main { padding: 52px 17px 80px; }
 }
